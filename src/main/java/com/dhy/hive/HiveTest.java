@@ -34,7 +34,7 @@ public class HiveTest {
         sql = "select * from  " + tableName;
         res = stmt.executeQuery(sql);
         System.out.println(res);
-        if (res.next()) {
+        while (res.next()) {
             System.out.println(res.getLong(1) +"," + res.getString(2) + "," + res.getInt(3));
         }
 
